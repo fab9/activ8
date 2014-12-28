@@ -1,6 +1,6 @@
 {
   "firebase": "activ8-2",
-  "public": "src/app",
+  "public": "src",
   "ignore": [
     "firebase.json",
     "**/.*",

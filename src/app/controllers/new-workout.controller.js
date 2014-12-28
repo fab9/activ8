@@ -4,7 +4,7 @@ angular.module('activ8')
 
 .controller('NewWorkoutController', function(Auth, $firebase){
 
-  var ref = new Firebase("https://activ8.firebaseio.com/workouts/" + Auth.getUser().uid),
+  var ref = new Firebase("https://activ8-2.firebaseio.com/workouts/" + Auth.getUser().uid),
   self = this,
   movements = {
     "PullUps": {
@@ -113,7 +113,7 @@ angular.module('activ8')
   //   return false;
   // }
   // }
-  
+
    // if($(".naming1").val().indexOf("Clean") > -1){
      // return true;
    // }

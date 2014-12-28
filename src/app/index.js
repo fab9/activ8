@@ -8,7 +8,7 @@ angular.module('activ8', ['firebase', 'ngRoute'])
 */
 .constant('CONFIG', {
   Firebase: {
-    baseUrl: 'https://activ8.firebaseio.com'
+    baseUrl: 'https://activ8-2.firebaseio.com'
   }
 })
 
