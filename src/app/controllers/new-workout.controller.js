@@ -4,7 +4,7 @@ angular.module('activ8')
 
 .controller('NewWorkoutController', function(Auth, $firebase, $location){
 
-  var ref = new Firebase("https://activ8.firebaseio.com/workouts/" + Auth.getUser().uid),
+  var ref = new Firebase("https://activ8-2.firebaseio.com/workouts/" + Auth.getUser().uid),
   self = this,
   movements = {
     "PullUps": {
