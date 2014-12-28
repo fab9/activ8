@@ -7,10 +7,7 @@ angular.module('activ8')
 
   var sync = $firebase(ref);
 
-  var historyArray = sync.$asArray();
-
-  this.historyList = historyArray
-
-
-
+  this.historyList = sync.$asArray();
+  console.log(this.historyList)
+  console.log(Auth.getUser().uid)
 });
