@@ -1,0 +1,9 @@
+{
+  "firebase": "activ8-2",
+  "public": "src/app",
+  "ignore": [
+    "firebase.json",
+    "**/.*",
+    "**/node_modules/**"
+  ]
+}
