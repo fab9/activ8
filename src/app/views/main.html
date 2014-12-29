@@ -9,17 +9,14 @@
         <p class="fbName">{{app.user.fullName|| displayName}}</p>
       </section><!-- / section.avatar -->
     </div>
-    <!-- BEGIN Buttons -->
   </section><!-- End new-dash -->
-  <section class="dash-buttons">
-    <div class="row row-2 buttons">
-      <a role="button" class="work-btn col-xs-12" href="#new-workout"><span class="glyphicon glyphicon-plus col-xs-2"></span><p class="col-xs-10 new-btn"> New Workout</p></a>
+
+  <!-- BEGIN Buttons -->
+  <section>
+    <div class="btn-group-vertical btn-block dash-btn-group" role="group" aria-label="user info">
+    <a role="button" class="work-btn btn btn-lg btn-default" href="#new-workout"><span class="glyphicon glyphicon-plus"></span>New Workout</a>
+    <a role="button" class="history-btn btn btn-lg btn-default" href="#history"><span class="glyphicon glyphicon-star"></span>My History</a>
+    <a role="button" class="pr-btn btn btn-lg btn-default" href="#pr"><span class="glyphicon glyphicon-calendar"></span>My PRs</a>
     </div>
-    <div class="row row-2">
-      <a role="button" class="history-btn col-xs-12" href="#history">My History</a>
-    </div>
-    <div class="row row-2">
-      <a role="button" class="pr-btn col-xs-12" href="#pr">My PR's</a>
-    </div>
-  </section>
+  </section><!-- /.dash-buttons -->
 </section><!-- / section#dashboard -->
