@@ -1,9 +1,43 @@
 /*Activ8 CSS*/
-
+// ======================================
+// $Global
+// ======================================
 body {
   margin: 0;
   padding: 0;
 }
+
+.container-fluid {
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+a, a:hover, a:active {
+  text-decoration: none;
+  cursor: pointer;
+}
+// ======================================
+// $Typography
+// ======================================
+h1 {
+  margin: 6px 0 0 0;
+  padding-left: 15%;
+  font-family: 'Stardos Stencil', 'Arial';
+  font-size: 30pt;
+}
+h3 {
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+h4 {
+  color: white;
+  font-weight: bold;
+}
+// ======================================
+// $Header
+// ======================================
 .navbar {
   background-color: rgba(188, 37, 54, 0.8);
   margin: 0;
@@ -15,25 +49,9 @@ body {
   padding-left: 10%;
 }
 .logout {
-  display: inline-block;
-  float: right;
-  margin: 2.5%;
+  background-color: transparent;
 }
-a, a:hover, a:active {
-  text-decoration: none;
-  cursor: pointer;
-}
-h1 {
-  margin: 6px 0 0 0;
-  padding-left: 15%;
-  font-family: 'Stardos Stencil', 'Arial';
-  font-size: 30pt;
-}
-.container-fluid {
-  padding: 0;
-  position: relative;
-  overflow: hidden;
-}
+
 .main-nav {
   position: absolute;
   top: 0;
@@ -45,14 +63,21 @@ h1 {
   width: 30px;
   padding-left: 30%;
 }
-.ree {
-  width: 40px;
-  padding-left: 20%;;
-}
+
 .name {
   text-align: center;
   color: white;
 }
+
+
+// ======================================
+// $xxxx
+// ======================================
+
+// ======================================
+// $xxxx
+// ======================================
+
 .main {
   width: 100%;
   margin: 0 auto;
@@ -83,15 +108,7 @@ h1 {
   padding-bottom: 5%;
   color: white;
 }
-h3 {
-  color: white;
-  margin: 0;
-  padding: 0;
-}
-h4 {
-  color: white;
-  font-weight: bold;
-}
+
 .save {
   margin-top: 5%;
 }
@@ -109,14 +126,7 @@ h4 {
   left: 25%;
   right: 25%;
 }
-footer {
-  width: 100%;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  text-align: center;
-  color: lightgray;
-}
+
 .container-fluid>.navbar-header {
   margin-right: 0;
 }
@@ -172,9 +182,7 @@ footer {
   transform: rotateZ(90deg)
 }
 .main-body {
-  background: url(../assets/images/boxbg.jpg) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  background-size: cover;
+  background-color: #33393F;
 }
 h2 {
   color: white;
@@ -292,3 +300,6 @@ h2 {
   margin: 0 auto;
 }
 
+// ======================================
+// $Responsive
+// ======================================
