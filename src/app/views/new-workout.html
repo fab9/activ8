@@ -1,36 +1,49 @@
 <div ng-include="'components/navbar/navbar.html'"></div>
-<section class="go-to-history col-xs-12">
-  <a href="#history" class="btn btn-warning btn-sm">My History</a>
-</section>
-<section class="main">
-  <form class="new-move col-xs-12" ng-submit="work.addWork(work.workout)" name="new">
-    <label><h4>Today's Workout</h4></label><br>
-    <div class="new-moves" ng-repeat="move in work.workout" >
-      <input class="form-control" ng-model="move.name" type="text" list="moving" placeholder="Select Movement" autocomplete="on" required>
-      <input type="text" class="form-control" ng-model="move.reps" placeholder="Reps" required>
-      <input type="text" class="form-control" ng-model="move.rds"  placeholder="Rounds" required>
+
+<!--   <section class="go-to-history">
+    <a href="#history" class="btn btn-warning btn-sm" role="button">My History</a>
+  </section>
+ -->
+  <section class="main">
+    <h4 class="text-center">Today's Workout</h4><br>
+
+    <!-- Form -->
+    <form class="new-move" ng-submit="work.addWork(work.workout)" name="new">
+     <div class="new-moves" ng-repeat="move in work.workout" >
+
+      <div class="form-group">
+        <input type="text" class="form-control" ng-model="move.name" list="moving" placeholder="Select Movement" autocomplete="on" required>
+      </div>
+
+      <div class="form-group">
+        <input type="text" class="form-control" ng-model="move.reps" placeholder="Reps" required>
+      </div>
+
+      <div class="form-group">
+        <input type="text" class="form-control" ng-model="move.rds"  placeholder="Rounds" required>
+      </div>
+
       <div class="input-group">
         <input type="text" class="form-control" ng-model="move.weight" placeholder="Weight">
         <span class="input-group-btn">
           <button class="btn btn-danger glyphicon glyphicon-trash" type="button" ng-click="work.delete(move)"></button>
         </span>
       </div><!-- /input-group -->
-      <input type="text" ng-hide="true" ng-model="move.moveNumber"><br>
+      <input type="text" ng-hide="true" ng-model="move.moveNumber">
+    </div><!-- /.new-moves -->
 
-    </div>
-    <div>
-      <input type="Button" class="btn btn-success" value="(+)Add Movement" ng-click="work.addMove()"><br>
-      <input type="submit" class="btn btn-primary" value="Save Workout" ng-disabled="work.disable()">
+     <div class="btn-group-vertical center-block">
+      <div class="form-group">
+       <input type="button" class="form-control btn btn-default btn-success" value="(+)Add Movement" ng-click="work.addMove()">
+     </div>
+       <div class="form-group">
+       <input type="submit" class="form-control btn btn-default btn-primary" value="Save Workout" ng-disabled="work.disable()">
+     </div>
+     </div>
+    </form>
 
-
-    </div>
-  </form>
-
-  <datalist id="moving">
-    <option data-ng-repeat="moves in work.moveList.movements" value="{{moves.name}}"></option>
-  </datalist>
-  <br>
-
-</section>
-<!-- / .main -->
+    <datalist id="moving">
+      <option data-ng-repeat="moves in work.moveList.movements" value="{{moves.name}}"></option>
+    </datalist>
+  </section><!-- / .main -->
 </div><!-- /.main-body -->
