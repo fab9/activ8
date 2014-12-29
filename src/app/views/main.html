@@ -4,8 +4,8 @@
   <!-- Begin new-dash -->
   <section class="new-dash">
       <div class="row row-1">
-      <section class="avatar col-xs-12">
-        <img ng-src="{{app.user.avatarUrl}}" class="img-responsive img-rounded fb-avatar" alt="" >
+      <section class="avatar">
+        <img ng-src="{{app.user.avatarUrl}}" class="img-responsive">
         <p class="fbName">{{app.user.fullName|| displayName}}</p>
       </section><!-- / section.avatar -->
     </div>
@@ -13,10 +13,10 @@
 
   <!-- BEGIN Buttons -->
   <section>
-    <div class="btn-group-vertical btn-block dash-btn-group" role="group" aria-label="user info">
-    <a role="button" class="work-btn btn btn-lg btn-default" href="#new-workout"><span class="glyphicon glyphicon-plus"></span>New Workout</a>
-    <a role="button" class="history-btn btn btn-lg btn-default" href="#history"><span class="glyphicon glyphicon-star"></span>My History</a>
-    <a role="button" class="pr-btn btn btn-lg btn-default" href="#pr"><span class="glyphicon glyphicon-calendar"></span>My PRs</a>
+    <div class="btn-group-vertical btn-group-lg dash-btn-group btn-block" role="group" aria-label="user info">
+    <a role="button" class="work-btn btn btn-default" href="#new-workout"><span class="glyphicon glyphicon-plus"></span>New Workout</a>
+    <a role="button" class="history-btn btn btn-default" href="#history"><span class="glyphicon glyphicon-star"></span>My History</a>
+    <a role="button" class="pr-btn btn btn-default" href="#pr"><span class="glyphicon glyphicon-calendar"></span>My PRs</a>
     </div>
   </section><!-- /.dash-buttons -->
 </section><!-- / section#dashboard -->

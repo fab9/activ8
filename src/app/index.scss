@@ -17,6 +17,9 @@ a, a:hover, a:active {
   text-decoration: none;
   cursor: pointer;
 }
+.glyphicon {
+  margin-right: 5px;
+}
 // ======================================
 // $Typography
 // ======================================
@@ -39,7 +42,7 @@ h4 {
 // $Header
 // ======================================
 .navbar {
-  background-color: rgba(188, 37, 54, 0.8);
+  // background-color: rgba(188, 37, 54, 0.8);
   margin: 0;
   border: none;
 }
@@ -68,18 +71,58 @@ h4 {
   text-align: center;
   color: white;
 }
-
+// ======================================
+// $Images
+// ======================================
+.avatar {
+  // font-size: 24px;
+  border: 2px solid transparent;
+  -webkit-box-shadow: 0px 0px 0px 2px #ffffff;
+  box-shadow: 0px 0px 0px 2px #ffffff;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  line-height: 80px;
+  margin: auto;
+  margin-top: 5px;
+  overflow: hidden;
+}
 
 // ======================================
 // $Buttons
 // ======================================
-.dash-btn-group  {
-  .btn {
-    text-align: left;
-    padding-left: 20%;
-  }
+.btn {
+    color: white;
+    border: none;
+    -webkit-transition: all ease 0.25s;
+            transition: all ease 0.25s;
+
+    &:hover {
+      border: none;
+    }
+
+}
+#dashboard .btn-group-vertical  {
+  margin-top: 10%;
+
+    .btn {
+      text-align: left;
+      padding-left: 20%;
+      border-radius: 0;
+      border-top: 1px solid white;
+      border-bottom: 1px solid white;
+
+        &:hover {
+          color: red;
+        }
+    }
 }
 
+#dashboard .btn-group-lg > .btn  {
+  padding-top: 1.5em;
+  padding-bottom: 1.5em;
+  background-color: transparent;
+}
 // ======================================
 // $xxxx
 // ======================================
@@ -214,14 +257,11 @@ h2 {
 .row-3 {
   color: white;
   min-height: 20%;
-  background-color: rgba(200,0,0,0.5);
+  // background-color: rgba(200,0,0,0.5);
   margin: 8% auto 0 auto;
   width: 90%;
 }
-.avatar {
-  padding: 0;
-  padding-left: 10%;
-}
+
 .plus-workout button {
   width: 100%;
   min-height: 80px;
