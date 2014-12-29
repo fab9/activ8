@@ -1,14 +1,7 @@
+<div ng-include="'components/navbar/navbar.html'"></div>
+
 
 <section ng-show="app.loggedIn()" id="dashboard" class="main-dash">
-  <nav class="navbar navbar-default main-nav" role="navigation">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <a class="navbar-brand" href="#"></a>
-        <section class="appName navbar-left"><a class="name" href="#"><h1>Activ8</h1></a></section>
-        <button ng-click="app.logout()" class="btn navbar-right logout-button">Logout</button>
-      </div>
-    </div><!--/.container-fluid -->
-  </nav>
   <div class="row row-1">
     <section class="avatar col-xs-5">
       <img ng-src="{{app.user.avatarUrl}}" class="img-responsive img-rounded fb-avatar" alt="" width="100px" height="100px">
