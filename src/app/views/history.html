@@ -1,15 +1,30 @@
 <div ng-include="'components/navbar/navbar.html'"></div>
-<section class="main container-fluid">
-  <section class="my-history col-xs-12">
-    <h2 class="histroy-head">My History</h2>
-      <div class="history-list" ng-repeat="work in history.historyList | orderBy:'date':true" style="border: 2px solid white">
-         <h4>{{work.date | date:'short'}}</h4>
-        <div class="move-listings" ng-repeat="move in work.movements">
-              <h5>{{move.name}}</h5>
-              <p>Reps: {{move.reps}}</p>
-              <p>Rds: {{move.rds}}</p>
-              <p>Lbs: {{move.weight}}</p>
-        </div>
+<div class="text-center page-title"><p>History</p></div>
+
+
+
+<div class="row">
+  <section id="history">
+    <!-- WOD  -->
+    <div class="wod history-list" ng-repeat="work in history.historyList | orderBy:'date':true" style="border: 1px solid white">
+      <h4 class="wod-title">{{work.date | date:'short'}}</h4>
+
+      <div class="wod-movement" ng-repeat="move in work.movements">
+        <p>{{move.name}}</p>
+          <ul>
+            <li>Reps: {{move.reps}}</li>
+            <li>Rounds: {{move.rds}}</li>
+            <li>Weight: {{move.weight}} lbs</li>
+          </ul>
       </div>
-  </section>
-</section>
+    </div>
+    <!-- End WOD -->
+
+
+
+
+
+
+
+  </section><!-- /#history -->
+</div><!-- /.row -->
