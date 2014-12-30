@@ -5,20 +5,36 @@
 
 <div class="row">
   <section id="history">
-    <!-- WOD  -->
-    <div class="wod history-list" ng-repeat="work in history.historyList | orderBy:'date':true" style="border: 1px solid white">
-      <h4 class="wod-title">{{work.date | date:'short'}}</h4>
 
-      <div class="wod-movement" ng-repeat="move in work.movements">
-        <p>{{move.name}}</p>
-          <ul>
-            <li>Reps: {{move.reps}}</li>
-            <li>Rounds: {{move.rds}}</li>
-            <li>Weight: {{move.weight}} lbs</li>
-          </ul>
-      </div>
-    </div>
-    <!-- End WOD -->
+<div class="wod-wrapper" ng-repeat="work in history.historyList | orderBy:'date':true">
+    <h4 class="wod-title">{{work.date | date:'short'}}</h4>
+    <table class="table wod history-list" style="border: 1px solid white">
+      <thead>
+        <tr>
+          <th>Movement</th>
+          <th>Reps</th>
+          <th>Rounds</th>
+          <th>Weight</th>
+        </tr>
+      </thead>
+      <tbody class="wod-movement" ng-repeat="move in work.movements">
+
+        <tr>
+          <td>{{move.name}}</td>
+          <td>{{move.reps}}</td>
+          <td>{{move.rds}}</td>
+          <td>{{move.weight}} lbs</td>
+        </tr>
+
+      </tbody>
+    </table></div>
+
+
+
+
+
+
+
 
 
 
