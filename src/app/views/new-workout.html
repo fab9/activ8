@@ -5,7 +5,8 @@
     <a href="#history" class="btn btn-warning btn-sm" role="button">My History</a>
   </section>
  -->
-  <section class="main">
+<div class="row">
+  <section>
 
     <!-- Form -->
     <form class="new-move" ng-submit="work.addWork(work.workout)" name="new">
@@ -45,5 +46,6 @@
     <datalist id="moving">
       <option data-ng-repeat="moves in work.moveList.movements" value="{{moves.name}}"></option>
     </datalist>
-  </section><!-- / .main -->
+  </section>
+</div><!-- /.row -->
 </div><!-- /.main-body -->

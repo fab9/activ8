@@ -1,6 +1,8 @@
-/*Activ8 CSS*/
-$main-color: #4ED267; // green
-$heading-font: 'Questrial', sans-serif;
+// Defaults
+//-------------------------------------------------//
+@import "sass/_variables";
+//-------------------------------------------------//
+
 // ======================================
 // $Global
 // ======================================
@@ -10,21 +12,17 @@ body {
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
   font-weight: 300;
-  color: #c8c8c8;
+  color: $charcoal;
+  background-color: #33393F;
 }
 
-.container-fluid {
-  padding: 0;
-  position: relative;
-  overflow: hidden;
-}
 .page-title  {
-  // color: $main-color;
-  font-family: $heading-font;
+
+  // font-family: $heading-font;
   // padding-bottom: 28px;
   padding-top: 1.5em;
-  background-color: #30363C;
-  border: 1px solid #000;
+  background-color: $dark-grey;
+  border: 1px solid $charcoal;
 
     p {
       // margin-bottom: 20px;
@@ -40,6 +38,27 @@ a, a:hover, a:active {
 .glyphicon {
   margin-right: 5px;
 }
+// Layout
+// .main {
+//   width: 100%;
+//   margin: 0 auto;
+//   height: 100vh;
+//   position: relative;
+//   display: flex;
+// }
+
+.container-fluid {
+  padding: 0;
+  // position: relative;
+  // overflow: hidden;
+  // outline: red solid 4px;
+  // background-color: goldenrod;
+}
+.row {
+  margin-left: 0; // bs override
+  margin-right: 0; // bs override
+}
+
 // ======================================
 // $Typography
 // ======================================
@@ -49,13 +68,11 @@ h1 {
   font-size: 30pt;
 }
 h3 {
-  color: white;
-  margin: 0;
-  padding: 0;
-  font-family: $heading-font;
+
+  // font-family: $heading-font;
 }
 h4 {
-  color: #999CA0; //lightgrey
+  color: $light-grey;
 }
 // ======================================
 // $Header
@@ -67,10 +84,10 @@ h4 {
 }
 
 .navbar-default {
-  background-color: #30363C; // sets nav's bg color
+  background-color: $dark-grey; // sets nav's bg color
 }
 .appName {
-  color: #eee;
+  color: $red;
   display: inline-block;
   padding-left: 10%;
 }
@@ -167,24 +184,26 @@ form .btn-group-vertical {
   margin-top: 10%;
 }
 // ======================================
-// $Forms
+// $History View
 // ======================================
-.main {
-  width: 100%;
-  margin: 0 auto;
-  // background-color: rgba(0,0,0,0.6);
-  // text-align: center;
-  height: 100vh;
-  position: relative;
-  display: flex;
+.wod-wrapper {
+  background-color: #47494C;
+  padding: 5px 15px;
+  margin: 15px 15px;
 }
-.main-dash {
-  width: 100%;
-  // margin: 0 auto;
-  // background-color: rgba(0,0,0,0.5);
-  // text-align: center;
-  height: 100vh;
+
+
+table.wod th { // this rule is not showing up
+  border-bottom: 2px solid #616467;
 }
+
+table.wod-wrapper tbody { // this rule is not showing up
+  border: none;
+}
+
+
+
+
 .kettleBox {
   padding: 8%;
   width: 100%;
@@ -218,13 +237,13 @@ form .btn-group-vertical {
   right: 25%;
 }
 
-.container-fluid>.navbar-header {
-  margin-right: 0;
-}
+// .container-fluid>.navbar-header {
+//   margin-right: 0;
+// }
 
-.movementsList, .workoutList {
-  padding-top: 30%;
-}
+// .movementsList, .workoutList {
+//   padding-top: 30%;
+// }
 .add {
   padding: 8% 0;
   margin-top: -10px;
@@ -271,9 +290,6 @@ form .btn-group-vertical {
   right: 0;
   top: 45%;
   transform: rotateZ(90deg)
-}
-.main-body {
-  background-color: #33393F;
 }
 
 .listOfMoves {
@@ -374,9 +390,7 @@ form .btn-group-vertical {
 .new-move::-webkit-scrollbar {
   display: none;
 }
-.history-list {
-  list-style-type: none;
-}
+
 .new-moves {
   width: 80%;
   margin: 0 auto;
