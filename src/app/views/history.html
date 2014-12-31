@@ -7,8 +7,8 @@
   <section id="history">
 
 <div class="wod-wrapper" ng-repeat="work in history.historyList | orderBy:'date':true">
-    <h4 class="wod-title">{{work.date | date:'short'}}</h4>
-    <table class="table wod history-list" style="border: 1px solid white">
+    <h3 class="wod-title text-center">{{work.date | date:'MMM dd'}}</h3>
+    <table class="table wod history-list">
       <thead>
         <tr>
           <th>Movement</th>
