@@ -9,20 +9,19 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Roboto', sans-serif;
-  font-size: 16px;
+  font-family: $font-family-serif:
+  font-size: $font-size-base:
   font-weight: 300;
-  color: $charcoal;
-  background-color: #33393F;
+  color: $grey-light;
+  background-color: $grey-darkest;
 }
 
 .page-title  {
-
   // font-family: $heading-font;
   // padding-bottom: 28px;
   padding-top: 1.5em;
-  background-color: $dark-grey;
-  border: 1px solid $charcoal;
+  background-color: $grey-darkest;
+  border: 1px solid $grey;
 
     p {
       // margin-bottom: 20px;
@@ -72,7 +71,7 @@ h3 {
   // font-family: $heading-font;
 }
 h4 {
-  color: $light-grey;
+  color: $grey-light;
 }
 // ======================================
 // $Header
@@ -84,7 +83,7 @@ h4 {
 }
 
 .navbar-default {
-  background-color: $dark-grey; // sets nav's bg color
+  background-color: $grey-darkest; // sets nav's bg color
 }
 .appName {
   color: $red;
@@ -109,7 +108,7 @@ h4 {
 
 .name {
   text-align: center;
-  color: white;
+  color: $white;
 }
 // ======================================
 // $Images
@@ -117,8 +116,8 @@ h4 {
 .avatar {
   // font-size: 24px;
   border: 2px solid transparent;
-  -webkit-box-shadow: 0px 0px 0px 2px #ffffff;
-  box-shadow: 0px 0px 0px 2px #ffffff;
+  -webkit-box-shadow: 0px 0px 0px 2px $white;
+  box-shadow: 0px 0px 0px 2px $white;
   border-radius: 50%;
   width: 80px;
   height: 80px;
@@ -166,17 +165,17 @@ h4 {
 }
 #dashboard .btn-group-vertical .work-btn {
       background-image: linear-gradient(rgba(0, 0, 0, 0.45098) 0%, rgba(0, 0, 0, 0.65098) 100%),
-                        url("/assets/images/plank.jpg");
+                        url($assets_img+"plank.jpg");
     }
 
 #dashboard .btn-group-vertical .history-btn {
       background-image: linear-gradient(rgba(0, 0, 0, 0.45098) 0%, rgba(0, 0, 0, 0.65098) 100%),
-                        url("/assets/images/clock.jpg");
+                        url($assets_img+"/clock.jpg");
     }
 
 #dashboard .btn-group-vertical .pr-btn {
   background-image: linear-gradient(rgba(0, 0, 0, 0.45098) 0%, rgba(0, 0, 0, 0.65098) 100%),
-                    url("/assets/images/personal-bests.jpg");
+                    url($assets_img+"personal-bests.jpg");
 }
 
 // New Workout View
@@ -187,14 +186,14 @@ form .btn-group-vertical {
 // $History View
 // ======================================
 .wod-wrapper {
-  background-color: #47494C;
+  background-color: $grey;
   padding: 5px 15px;
   margin: 15px 15px;
 }
 
 
 table.wod th { // this rule is not showing up
-  border-bottom: 2px solid #616467;
+  border-bottom: 2px solid $grey-light;
 }
 
 table.wod-wrapper tbody { // this rule is not showing up
