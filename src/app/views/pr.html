@@ -1,0 +1,17 @@
+<section id="personalBests">
+  <h2 class="pr-head">Personal Records
+    <ul class="pr-list">
+      <li ng-repeat="(name, best) in app.user.pr">
+<div id="contenteditable" contenteditable name="prs" ng-model="best.weight" class="prWeight">
+  <br>
+{{best.weight}}
+</div>
+        <p class="prName">Push Jerk</p>
+      </li>
+
+
+    </ul>
+</h2>
+
+
+</section>
