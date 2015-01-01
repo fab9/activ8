@@ -2,20 +2,18 @@
 // $Global
 // ======================================
 body {
-  font-family: $font-family-base;
-  font-size: $font-size-default;
   font-weight: 400;
   margin: 0;
   padding: 0;
-  color: $grey-light;
-  background-color: $grey-darkest;
+  color: $gray-light;
+  background-color: $gray-darker;
 }
 .page-title {
   // font-family: $heading-font;
   // padding-bottom: 28px;
   padding-top: 1.5em;
-  border: 1px solid $grey;
-  background-color: $grey-darkest;
+  border: 1px solid $gray;
+  background-color: $gray-darker;
   p {
     // margin-bottom: 20px;
     font-size: 3.125rem;
@@ -55,16 +53,12 @@ a, a:hover, a:active {
 // ======================================
 // $Typography
 // ======================================
-h1 {
-  font-size: 30pt;
-  margin: 6px 0 0 0;
-  padding-left: 15%;
-}
+
 h3 {
   // font-family: $heading-font;
 }
 h4 {
-  color: $grey-light;
+  color: $gray-light;
 }
 // ======================================
 // $Header
@@ -72,37 +66,27 @@ h4 {
 .navbar {
   // background-color: rgba(188, 37, 54, 0.8);
   margin: 0;
+  padding-left: 15px;
+  padding-right: 15px;
   border: none;
 }
 .navbar-default {
-  background-color: $grey-darkest;
-  // sets nav's bg color
+  background-color: $gray-darker; // sets nav's bg color
 }
-.appName {
+
+.navbar-brand {
   font-family: $font-family-brand;
-  display: inline-block;
-  padding-left: 10%;
   color: $red;
-}
-.logout {
-  background-color: transparent;
-}
-// .main-nav {
-  //   position: absolute;
-  //   top: 0;
-  //   left: 0;
-  //   width: 100%;
-  //   z-index: 1;
-  //
-// }
-.brand {
-  width: 30px;
-  padding-left: 30%;
 }
 .name {
   text-align: center;
   color: $white;
 }
+
+.btn-logout {
+  background-color: transparent;
+}
+
 // ======================================
 // $Images
 // ======================================
@@ -169,11 +153,11 @@ form .btn-group-vertical {
 .wod-wrapper {
   margin: 15px 15px;
   padding: 5px 15px;
-  background-color: $grey;
+  background-color: $gray;
 }
 table.wod th {
   // this rule is not showing up
-  border-bottom: 2px solid $grey-light;
+  border-bottom: 2px solid $gray-light;
 }
 table.wod-wrapper tbody {
   // this rule is not showing up
@@ -349,11 +333,7 @@ table.wod-wrapper tbody {
   width: 80%;
   height: 50px;
 }
-.logout-button {
-  position: absolute;
-  top: 10%;
-  right: 2%;
-}
+
 .new-move {
   overflow: auto;
   height: auto;
