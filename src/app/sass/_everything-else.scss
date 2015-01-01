@@ -1,0 +1,369 @@
+// ======================================
+// $Global
+// ======================================
+body {
+  font-family: $font-family-base;
+  font-size: $font-size-default;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+  color: $grey-light;
+  background-color: $grey-darkest;
+}
+.page-title {
+  // font-family: $heading-font;
+  // padding-bottom: 28px;
+  padding-top: 1.5em;
+  border: 1px solid $grey;
+  background-color: $grey-darkest;
+  p {
+    // margin-bottom: 20px;
+    font-size: 3.125rem;
+    line-height: 4.063rem;
+    letter-spacing: 1px;
+  }
+}
+a, a:hover, a:active {
+  cursor: pointer;
+  text-decoration: none;
+}
+.glyphicon {
+  margin-right: 5px;
+}
+// Layout
+// .main {
+  //   width: 100%;
+  //   margin: 0 auto;
+  //   height: 100vh;
+  //   position: relative;
+  //   display: flex;
+  //
+// }
+.container-fluid {
+  padding: 0;
+  // position: relative;
+  // overflow: hidden;
+  // outline: red solid 4px;
+  // background-color: goldenrod;
+}
+.row {
+  margin-right: 0;
+  // bs override
+  margin-left: 0;
+  // bs override
+}
+// ======================================
+// $Typography
+// ======================================
+h1 {
+  font-size: 30pt;
+  margin: 6px 0 0 0;
+  padding-left: 15%;
+}
+h3 {
+  // font-family: $heading-font;
+}
+h4 {
+  color: $grey-light;
+}
+// ======================================
+// $Header
+// ======================================
+.navbar {
+  // background-color: rgba(188, 37, 54, 0.8);
+  margin: 0;
+  border: none;
+}
+.navbar-default {
+  background-color: $grey-darkest;
+  // sets nav's bg color
+}
+.appName {
+  font-family: $font-family-brand;
+  display: inline-block;
+  padding-left: 10%;
+  color: $red;
+}
+.logout {
+  background-color: transparent;
+}
+// .main-nav {
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+  //   width: 100%;
+  //   z-index: 1;
+  //
+// }
+.brand {
+  width: 30px;
+  padding-left: 30%;
+}
+.name {
+  text-align: center;
+  color: $white;
+}
+// ======================================
+// $Images
+// ======================================
+.avatar {
+  line-height: 80px;
+  overflow: hidden;
+  width: 80px;
+  height: 80px;
+  margin: auto;
+  margin-top: 5px;
+  // font-size: 24px;
+  border: 2px solid transparent;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 0 0 2px $white;
+  box-shadow: 0 0 0 2px $white;
+}
+// ======================================
+// $Buttons
+// ======================================
+.btn {
+  -webkit-transition: all ease .25s;
+  transition: all ease .25s;
+  color: white;
+  border: none;
+  &:hover {
+    border: none;
+  }
+}
+#dashboard .btn-group-vertical {
+  margin-top: 10%;
+  .btn {
+    height: 120px;
+    padding: 15px;
+    text-align: center;
+    // display: table-cell;
+    vertical-align: middle;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    border-radius: 0;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    &:hover {
+      color: red;
+    }
+  }
+}
+#dashboard .btn-group-vertical .work-btn {
+  background-image: linear-gradient(rgba(0, 0, 0, .45098) 0%, rgba(0, 0, 0, .65098) 100%), url($assets_img+"plank.jpg");
+}
+#dashboard .btn-group-vertical .history-btn {
+  background-image: linear-gradient(rgba(0, 0, 0, .45098) 0%, rgba(0, 0, 0, .65098) 100%), url($assets_img+"/clock.jpg");
+}
+#dashboard .btn-group-vertical .pr-btn {
+  background-image: linear-gradient(rgba(0, 0, 0, .45098) 0%, rgba(0, 0, 0, .65098) 100%), url($assets_img+"personal-bests.jpg");
+}
+// New Workout View
+form .btn-group-vertical {
+  margin-top: 10%;
+}
+// ======================================
+// $History View
+// ======================================
+.wod-wrapper {
+  margin: 15px 15px;
+  padding: 5px 15px;
+  background-color: $grey;
+}
+table.wod th {
+  // this rule is not showing up
+  border-bottom: 2px solid $grey-light;
+}
+table.wod-wrapper tbody {
+  // this rule is not showing up
+  border: none;
+}
+.kettleBox {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  margin: 0 auto;
+  padding: 8%;
+  text-align: center;
+  background-color: rgba(0, 0, 0, .4);
+}
+.whatWork {
+  font-size: 20pt;
+  padding-bottom: 5%;
+  color: white;
+}
+.save {
+  margin-top: 5%;
+}
+.kettle {
+  /* margin: 50% auto 0 auto;
+  */
+  position: absolute;
+  top: 30%;
+  right: 30%;
+  left: 30%;
+  width: 40%;
+}
+.loginText {
+  position: absolute;
+  top: 65%;
+  right: 25%;
+  left: 25%;
+}
+// .container-fluid>.navbar-header {
+  //   margin-right: 0;
+  //
+// }
+// .movementsList, .workoutList {
+  //   padding-top: 30%;
+  //
+// }
+.add {
+  margin-top: -10px;
+  padding: 8% 0;
+}
+.userInfo {
+  position: relative;
+  width: 200px;
+  height: 150px;
+  margin: 73% auto 0 auto;
+  background: burlywood;
+}
+.username {
+  position: absolute;
+  top: 18%;
+  left: 14%;
+  width: 70%;
+}
+.pw {
+  position: absolute;
+  top: 60%;
+  left: 14%;
+  width: 70%;
+}
+.first24 {
+  position: absolute;
+  top: 0;
+  right: 25%;
+  left: 25%;
+}
+.second24 {
+  position: absolute;
+  right: 25%;
+  bottom: -8%;
+  left: 25%;
+}
+.first30 {
+  position: absolute;
+  top: 45%;
+  left: 0;
+  transform: rotateZ(90deg);
+}
+.second30 {
+  position: absolute;
+  top: 45%;
+  right: 0;
+  transform: rotateZ(90deg);
+}
+.listOfMoves {
+  padding: 0;
+  list-style-type: none;
+}
+.btn.deleteMove {
+  margin: 0;
+  margin-left: -24px;
+  padding: 0 2%;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  background-color: firebrick;
+}
+.row-1 {
+  margin: 0;
+}
+.row-3 {
+  width: 90%;
+  min-height: 20%;
+  // background-color: rgba(200, 0, 0, 0.5);
+  margin: 8% auto 0 auto;
+  color: white;
+}
+.plus-workout button {
+  font-size: 15pt;
+  width: 100%;
+  min-height: 80px;
+}
+.plus-workout button a {
+  color: white;
+}
+#personalBests {
+  height: 100vh;
+  color: white;
+  background-color: rgba(0, 0, 0, .5);
+}
+.prList {
+  padding-right: 10px;
+  padding-left: 10px;
+  list-style-type: none;
+}
+.prDrop {
+  padding-right: 10px;
+  padding-left: 10px;
+  list-style-type: none;
+}
+.prDrop li {
+  font-size: 12pt;
+  margin: 5% 0;
+  text-align: center;
+}
+.prList li {
+  font-size: 12pt;
+  margin-bottom: 5%;
+  text-align: center;
+}
+.records {
+  width: 85%;
+  margin: 0 auto 2% auto;
+  padding-top: 10%;
+}
+.page-down a {
+  font-size: 50pt;
+  color: rgba(200, 0, 0, .5);
+}
+.fbName {
+  font-weight: bold;
+  margin: 0;
+  text-align: left;
+  color: white;
+}
+.page-up {
+  padding: 0;
+  text-align: center;
+}
+.page-up a {
+  font-size: 50pt;
+  color: rgba(200, 0, 0, .5);
+}
+#personalRecords {
+  width: 80%;
+  height: 50px;
+}
+.logout-button {
+  position: absolute;
+  top: 10%;
+  right: 2%;
+}
+.new-move {
+  overflow: auto;
+  height: auto;
+  margin-top: 5%;
+  -webkit-overflow-scrolling: touch;
+}
+.new-move::-webkit-scrollbar {
+  display: none;
+}
+.new-moves {
+  width: 80%;
+  margin: 0 auto;
+}

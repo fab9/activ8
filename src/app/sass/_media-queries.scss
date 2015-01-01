@@ -1,0 +1,33 @@
+// ======================================
+// $Media Queries
+// ======================================
+
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Bootstrap */
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: $break-sm-min) {
+  .page-title {
+    background-color: thistle;
+  }
+ }
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: $break-md-min) {
+  .page-title {
+    background-color: goldenrod;
+  }
+ }
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: $break-lg-min) {
+  .page-title {
+    background-color: yellowgreen;
+  }
+}
+
+
+// So media queries don't overlap when required, provide a maximum
+// $screen-xs-max:              ($screen-sm-min - 1)
+// $screen-sm-max:              ($screen-md-min - 1)
+// $screen-md-max:              ($screen-lg-min - 1)
