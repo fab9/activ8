@@ -20,6 +20,7 @@ angular.module('activ8', ['firebase', 'ngRoute'])
     .when('/', {
         templateUrl: 'app/views/main.html'
 
+
     })
      .when('/new-workout', {
         templateUrl: 'app/views/new-workout.html',
@@ -38,6 +39,7 @@ angular.module('activ8', ['firebase', 'ngRoute'])
 
     })
      .otherwise({
-        redirectTo: '/'
+      // redirectTo: '/'
+        redirectTo: 'app/views/new-workout.html'
       });
 }]);

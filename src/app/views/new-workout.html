@@ -9,11 +9,11 @@
   <section>
 
     <!-- Form -->
-    <form class="new-move" ng-submit="work.addWork(work.workout)" name="new">
+    <form id="log" ng-submit="work.addWork(work.workout)" name="new">
      <div class="new-moves" ng-repeat="move in work.workout" >
 
       <div class="form-group">
-        <input type="text" class="form-control" ng-model="move.name" list="moving" placeholder="Select Movement" autocomplete="on" required>
+        <input type="text" class="form-control" ng-model="move.name" list="moving" placeholder="Select movement" autocomplete="on" required>
       </div>
 
       <div class="form-group">
@@ -25,7 +25,7 @@
       </div>
 
       <div class="input-group">
-        <input type="text" class="form-control" ng-model="move.weight" placeholder="Weight">
+        <input type="text" class="form-control" ng-model="move.weight" placeholder="Weight (lbs)">
         <span class="input-group-btn">
           <button class="btn btn-danger glyphicon glyphicon-trash" type="button" ng-click="work.delete(move)"></button>
         </span>
@@ -33,9 +33,9 @@
       <input type="text" ng-hide="true" ng-model="move.moveNumber">
     </div><!-- /.new-moves -->
 
-     <div class="btn-group-vertical center-block">
+     <div class="btn-group-vertical center-block log-btn-group">
       <div class="form-group">
-       <input type="button" class="form-control btn btn-default btn-success" value="(+)Add Movement" ng-click="work.addMove()">
+       <input type="button" class="form-control btn btn-default btn-success" value="Add Movement" ng-click="work.addMove()">
      </div>
        <div class="form-group">
        <input type="submit" class="form-control btn btn-default btn-primary" value="Save Workout" ng-disabled="work.disable()">

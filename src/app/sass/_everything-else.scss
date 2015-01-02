@@ -147,9 +147,27 @@ h4 {
 #dashboard .btn-group-vertical .pr-btn {
   background-image: linear-gradient(rgba(0, 0, 0, .45098) 0%, rgba(0, 0, 0, .65098) 100%), url($assets_img+"personal-bests.jpg");
 }
-// New Workout View
-form .btn-group-vertical {
+
+// Log Workout screen
+#log  {
+  overflow: auto;
+  height: auto;
+  margin: 0 auto;
+  margin-top: 5%;
+  width: 80%;
+  -webkit-overflow-scrolling: touch;
+}
+#log::-webkit-scrollbar {
+  display: none;
+}
+// add mvmnt and save workout btns
+.log-btn-group {
   margin-top: 10%;
+}
+// targets text input fields
+#log .new-moves {
+  margin-bottom: 15px;
+  outline: solid red 2px;
 }
 // ======================================
 // $History View
@@ -338,16 +356,3 @@ table.wod-wrapper tbody {
   height: 50px;
 }
 
-.new-move {
-  overflow: auto;
-  height: auto;
-  margin-top: 5%;
-  -webkit-overflow-scrolling: touch;
-}
-.new-move::-webkit-scrollbar {
-  display: none;
-}
-.new-moves {
-  width: 80%;
-  margin: 0 auto;
-}
