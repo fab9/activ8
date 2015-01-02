@@ -1,23 +1,25 @@
-$gray-darker:            #313036;
-$gray-dark:              #80828F;
-$gray:                   #B1B0B8;
-$gray-light:             #E5E8F1;
+// $grey-darker:            #313036;
+// $grey-dark:              #80828F;
+// $grey:                   #B1B0B8;
+// $grey-light:             #E5E8F1;
 // ======================================
 // $Global
 // ======================================
 body {
+  font-family: $font-family-base;
   font-weight: 400;
   margin: 0;
   padding: 0;
-  color: $gray-light;
-  background-color: $gray-darker;
+  color: $grey-light;
+  background-color: $grey-darker;
+  font-size: $font-size-base;
 }
 .page-title {
   // font-family: $heading-font;
   // padding-bottom: 28px;
   padding-top: 1.5em;
-  border: 1px solid $gray;
-  background-color: $gray-darker;
+  border-top: 1px solid $grey;
+  background-color: $grey-darker;
   p {
     // margin-bottom: 20px;
     font-size: 3.125rem;
@@ -54,15 +56,18 @@ a, a:hover, a:active {
   margin-left: 0;
   // bs override
 }
+label {
+  font-weight: normal;
+}
 // ======================================
-// $Typography
+// $Headings
 // ======================================
 
 h3 {
   // font-family: $heading-font;
 }
 h4 {
-  color: $gray-light;
+  color: $grey-light;
 }
 // ======================================
 // $Header
@@ -75,21 +80,18 @@ h4 {
   border: none;
 }
 .navbar-default {
-  background-color: $gray-darker; // sets nav's bg color
+  background-color: $black; // sets nav's bg color
 }
 
 .navbar-brand {
   font-family: $font-family-brand;
-  color: $red;
+  color: $grey;
 }
 .name {
   text-align: center;
-  color: $white;
+  color: $red;
 }
 
-.btn-logout {
-  background-color: transparent;
-}
 
 // ======================================
 // $Images
@@ -110,14 +112,54 @@ h4 {
 // ======================================
 // $Buttons
 // ======================================
+// .standard-button,
+// .standard-button2 {
+//   height: 38px;
+//   // letter-spacing: -.02em;
+//   color: rgba($red, .8);
+//   border: 2px solid rgba($red, .15);
+//   border-radius: 999em;
+//   outline: 0;
+//   background: rgba($red, 0);
+//   -webkit-transition: all ease 0.25s;
+//           transition: all ease 0.25s;
+// }
+
+// .standard-button:hover,
+// .standard-button2:hover {
+//   color: rgba(0, 0, 0, .6);
+//   border-color: rgba(0, 0, 0, .3);
+// }
 .btn {
-  -webkit-transition: all ease .25s;
-  transition: all ease .25s;
-  color: white;
-  border: none;
-  &:hover {
+  background: $blue;
+  border-color: $blue;
+  color: $white;
+  outline: 0;
+  -webkit-transition: all ease 0.25s;
+          transition: all ease 0.25s;
+    &:hover,
+    &:focus,
+    &:active {
+      color: inherit;
+      background-color: rgba( $blue, .7 );
+      border-color: rgba( $blue, .7 );
+      outline: 0;
+
+    }
+
+    &-default:hover,
+    &-default:focus,
+    &-default:active {
+      color: $grey-darker;
+      background-color: rgba( $blue, .7 );
+      border-color: rgba( $blue, .7 );
+    }
+
+    &-link {
+    background-color: transparent;
     border: none;
-  }
+    color: inherit;
+    }
 }
 #dashboard .btn-group-vertical {
   margin-top: 10%;
@@ -134,7 +176,7 @@ h4 {
     background-position: center center;
     background-size: cover;
     &:hover {
-      color: red;
+      color: $grey;
     }
   }
 }
@@ -159,14 +201,20 @@ h4 {
 #log::-webkit-scrollbar {
   display: none;
 }
-// add mvmnt and save workout btns
-// .log-btn-group {
-
-// }
 // targets text input fields
 #log .new-moves {
-  margin-bottom: 15px;
-  outline: solid red 2px;
+  padding-bottom: 30px;
+  padding-top: 30px;
+
+  &:not(:nth-child(1)) {
+    border-top: solid 2px $grey;
+  }
+
+}
+// add mvmnt and save workout btns
+.log-btn-group {
+  margin-top: 15px;
+
 }
 // ======================================
 // $History View
@@ -174,11 +222,11 @@ h4 {
 .wod-wrapper {
   margin: 15px 15px;
   padding: 5px 15px;
-  background-color: $gray;
+  background-color: $grey;
 }
 table.wod th {
   // this rule is not showing up
-  border-bottom: 2px solid $gray-light;
+  border-bottom: 2px solid $grey-light;
 }
 table.wod-wrapper tbody {
   // this rule is not showing up

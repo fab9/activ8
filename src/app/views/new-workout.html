@@ -16,7 +16,9 @@
            <label for="selectmovement">Select Movement</label>
            <input type="text" class="form-control" id="selectmovement" ng-model="move.name" list="moving" placeholder="Push Ups" autocomplete="on" required>
            <!-- delete movement -->
-             <button class="btn btn-link btn-delete glyphicon glyphicon-remove" type="button" ng-click="work.delete(move)"></button>
+             <button class="btn btn-link btn-delete glyphicon glyphicon-remove" aria-label="Remove" type="button" ng-click="work.delete(move)">
+
+             </button>
          </div>
 
          <div class="form-group">
@@ -40,12 +42,12 @@
    </div><!-- /.row -->
 
   <!-- Begin buttons -->
-   <div class="btn-group-vertical col-sm-3 col-sm-offset-4 log-btn-group">
+   <div class="btn-group-vertical col-sm-4 col-sm-offset-4 log-btn-group">
     <div class="form-group">
-     <input type="button" class="form-control btn btn-default btn-success " value="Add Movement" ng-click="work.addMove()">
+     <input type="button" class="form-control btn" value="Add Movement" ng-click="work.addMove()">
    </div>
      <div class="form-group">
-     <input type="submit" class="form-control btn btn-default btn-primary" value="Save Workout" ng-disabled="work.disable()">
+     <input type="submit" class="form-control btn btn-default" value="Save Workout" ng-disabled="work.disable()">
    </div>
    </div>
   </form>
