@@ -154,16 +154,15 @@ h4 {
   height: auto;
   margin: 0 auto;
   margin-top: 5%;
-  width: 80%;
   -webkit-overflow-scrolling: touch;
 }
 #log::-webkit-scrollbar {
   display: none;
 }
 // add mvmnt and save workout btns
-.log-btn-group {
-  margin-top: 10%;
-}
+// .log-btn-group {
+
+// }
 // targets text input fields
 #log .new-moves {
   margin-bottom: 15px;
