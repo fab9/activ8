@@ -16,8 +16,8 @@ $black: #18232A;
 $red: #DA423E;
 $green: #60C78E;
 $blue: #20B3D9;
-$font-size-base: 16px;
-
+$dash-btn-gradient: linear-gradient(rgba(0, 0, 0, .45098) 0%, rgba(0, 0, 0, .75098) 100%);
+$dash-btn-gradient-light: linear-gradient(rgba(0, 0, 0, .35098) 0%, rgba(0, 0, 0, .75098) 100%);
 
 //-------------------------------------------------//
 
@@ -27,6 +27,9 @@ $font-size-base: 16px;
 $font-family-base:  'Roboto', sans-serif;
 // $font-family-serif:       Georgia, serif;
 $font-family-brand:       'Stardos Stencil', Arial;
+$font-size-base: 16px;
+$font-size-large:         ceil(($font-size-base * 1.25));
+$font-size-small:         ceil(($font-size-base * 0.85));
 
 
 
