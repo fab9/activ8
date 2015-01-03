@@ -12,7 +12,6 @@ $grey-light: #DFECF2;
 $grey-dark: #293D4C;
 $grey-darker: #1A252C;
 $black: #18232A;
-
 $red: #DA423E;
 $green: #60C78E;
 $blue: #20B3D9;
@@ -38,7 +37,7 @@ $font-size-small:         ceil(($font-size-base * 0.85));
 
 // Media Queries
 //-------------------------------------------------//
-$break-sm-min: 320px;
+$break-sm-min: 768px;
 $break-md-min: 992px;
 $break-lg-min: 1200px;
 

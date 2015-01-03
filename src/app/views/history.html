@@ -1,46 +1,27 @@
 <div ng-include="'components/navbar/navbar.html'"></div>
 <div class="text-center page-title"><p>History</p></div>
-
-
-
 <div class="row">
-  <section id="history">
-
-<div class="wod-wrapper" ng-repeat="work in history.historyList | orderBy:'date':true">
-    <h3 class="wod-title text-center">{{work.date | date:'MMM dd'}}</h3>
-    <table class="table wod history-list">
-      <thead>
-        <tr>
-          <th>Movement</th>
-          <th>Reps</th>
-          <th>Rounds</th>
-          <th>Weight</th>
-        </tr>
-      </thead>
-      <tbody class="wod-movement" ng-repeat="move in work.movements">
-
-        <tr>
-          <td>{{move.name}}</td>
-          <td>{{move.reps}}</td>
-          <td>{{move.rds}}</td>
-          <td>{{move.weight}} lbs</td>
-        </tr>
-
-      </tbody>
-    </table></div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  <section id="history" class="col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2">
+    <div class="wod-wrapper" ng-repeat="work in history.historyList | orderBy:'date':true">
+      <h3 class="wod-title"><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>{{work.date | date:'MMM dd'}}</h3>
+      <table class="table wod history-list">
+        <thead>
+          <tr>
+            <th>Movement</th>
+            <th class="text-right">Reps</th>
+            <th class="text-right">Rounds</th>
+            <th class="text-right">Weight</th>
+          </tr>
+        </thead>
+        <tbody class="wod-movement" ng-repeat="move in work.movements">
+          <tr>
+            <td>{{move.name}}</td>
+            <td class="text-right">{{move.reps}}</td>
+            <td class="text-right">{{move.rds}}</td>
+            <td class="text-right">{{move.weight}} lbs</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </section><!-- /#history -->
 </div><!-- /.row -->

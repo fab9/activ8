@@ -7,40 +7,36 @@
 
 /* Small devices (tablets, 768px and up) */
 @media (min-width: $break-sm-min) {
-  .navbar-default {
-    background-color: $red;
-  }
+  // .navbar-default {
+  //   background-color: $red;
+  // }
   // Log Workout screen
   #log  {
     margin-top: 5%;
     // width: 30%;
   }
-  #log #selectmovement {
-    position: relative;
-  }
-  .btn-delete {
-    position: absolute;
-    left: 100%;
-    margin-top: 55px;
-    color: $grey-light;
-    border: none;
-    background-color: transparent;
-  }
+
  }
 
 
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: $break-md-min) {
-  .navbar-default {
-    background-color: $green;
+  // .navbar-default {
+  //   background-color: $green;
+  // }
+   body {
+    font-size: $font-size-large;
   }
  }
 
 
 /* Large devices (large desktops, 1200px and up) */
 @media (min-width: $break-lg-min) {
-  .navbar-default {
-    background-color: $blue;
+  // .navbar-default {
+  //   background-color: $blue;
+  // }
+  body {
+    font-size: $font-size-large;
   }
 }
 

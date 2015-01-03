@@ -7,27 +7,33 @@
 // ======================================
 body {
   font-family: $font-family-base;
-  font-weight: 400;
+  font-style: normal;
+  font-weight: 300;
   margin: 0;
   padding: 0;
   color: $grey-light;
   background-color: $grey-darker;
   font-size: $font-size-base;
+  letter-spacing: .2px;
+  background: $dash-btn-gradient, url($assets_img+"boxbg.jpg") no-repeat center center fixed;
+  background-size: cover;
+  height: 100vh;
 }
 .page-title {
   // font-family: $heading-font;
   // padding-bottom: 28px;
   padding-top: 1.5em;
   border-top: 1px solid $grey;
-  background-color: $grey-dark;
+  background-color: rgba($black,0.7);
   p {
     // margin-bottom: 20px;
     font-size: 3.125rem;
     line-height: 4.063rem;
-    letter-spacing: 1px;
+    // letter-spacing: 1px;
   }
 }
-a, a:hover, a:active {
+a, a:hover,
+a:active {
   cursor: pointer;
   text-decoration: none;
 }
@@ -35,27 +41,14 @@ a, a:hover, a:active {
   margin-right: 5px;
 }
 // Layout
-// .main {
-  //   width: 100%;
-  //   margin: 0 auto;
-  //   height: 100vh;
-  //   position: relative;
-  //   display: flex;
-  //
-// }
 .container-fluid {
   padding: 0;
-  // position: relative;
-  // overflow: hidden;
-  // outline: red solid 4px;
-  // background-color: goldenrod;
 }
 .row {
-  margin-right: 0;
-  // bs override
-  margin-left: 0;
-  // bs override
+  margin-right: 0; // bs override
+  margin-left: 0; // bs override
 }
+
 label {
   font-weight: normal;
 }
@@ -78,9 +71,11 @@ h4 {
   padding-left: 15px;
   padding-right: 15px;
   border: none;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.26);
 }
 .navbar-default {
-  background-color: $black; // sets nav's bg color
+  background-color: rgba($grey-darker,0.7);
+  // sets nav's bg color
 }
 
 .navbar-brand {
@@ -112,24 +107,6 @@ h4 {
 // ======================================
 // $Buttons
 // ======================================
-// .standard-button,
-// .standard-button2 {
-//   height: 38px;
-//   // letter-spacing: -.02em;
-//   color: rgba($red, .8);
-//   border: 2px solid rgba($red, .15);
-//   border-radius: 999em;
-//   outline: 0;
-//   background: rgba($red, 0);
-//   -webkit-transition: all ease 0.25s;
-//           transition: all ease 0.25s;
-// }
-
-// .standard-button:hover,
-// .standard-button2:hover {
-//   color: rgba(0, 0, 0, .6);
-//   border-color: rgba(0, 0, 0, .3);
-// }
 .btn {
   background: $blue;
   border-color: $blue;
@@ -144,7 +121,6 @@ h4 {
       background-color: rgba( $blue, .7 );
       border-color: rgba( $blue, .7 );
       outline: 0;
-
     }
 
     &-default:hover,
@@ -155,13 +131,17 @@ h4 {
       border-color: rgba( $blue, .7 );
     }
 
-    &-primary,
+    &-primary  {
+      color: $white;
+      background-color: $grey;
+      border-color: $grey;
+    }
     &-primary:hover,
     &-primary:focus,
     &-primary:active {
-      color: $grey-darker;
-      background-color: $grey;
-      border-color: $grey;
+      color: $white;
+      background-color: rgba( $grey, .7 );
+      border-color: rgba( $grey, .7 );
     }
     &-link {
     background-color: transparent;
@@ -171,6 +151,8 @@ h4 {
 }
 #dashboard .btn-group-vertical {
   margin-top: 10%;
+  box-shadow: 0 0 2px rgba(16,42,46,0.55);
+
   .btn {
     font-size: $font-size-large;
     letter-spacing: .1em;
@@ -188,6 +170,7 @@ h4 {
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
+
     &:hover {
       color: $white;
 
@@ -237,24 +220,57 @@ h4 {
 // add mvmnt and save workout btns
 .log-btn-group {
   margin-top: 15px;
-
 }
+  #log #selectmovement {
+    position: relative;
+  }
+  .btn-delete {
+    position: absolute;
+    left: 100%;
+    margin-top: 55px;
+    color: inherit;
+    border: none;
+    background-color: transparent;
+
+    &:hover {
+      text-decoration: none;
+      color: $red;
+      background-color: transparent;
+    }
+  }
 // ======================================
 // $History View
 // ======================================
 .wod-wrapper {
   margin: 15px 15px;
   padding: 5px 15px;
-  background-color: $grey;
+  background-color: $grey-dark;
 }
-table.wod th {
-  // this rule is not showing up
-  border-bottom: 2px solid $grey-light;
-}
-table.wod-wrapper tbody {
+.wod-wrapper tbody {
   // this rule is not showing up
   border: none;
 }
+.wod > thead > tr > th {
+  border-bottom: 2px solid $grey;
+  color: rgba($grey-light, .5);
+  text-transform: uppercase;
+}
+.wod-title {
+  color: $red;
+  font-weight: 100;
+}
+
+.table > tbody + tbody {
+border-top: 2px solid $grey;
+}
+
+
+
+
+
+
+
+
 .kettleBox {
   position: relative;
   width: 100%;
@@ -287,14 +303,6 @@ table.wod-wrapper tbody {
   right: 25%;
   left: 25%;
 }
-// .container-fluid>.navbar-header {
-  //   margin-right: 0;
-  //
-// }
-// .movementsList, .workoutList {
-  //   padding-top: 30%;
-  //
-// }
 .add {
   margin-top: -10px;
   padding: 8% 0;
