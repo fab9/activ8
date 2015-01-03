@@ -1,4 +1,7 @@
-<nav class="navbar navbar-default main-nav" role="navigation">
+<nav class="navbar navbar-default" role="navigation">
+  <!-- Logout -->
+  <button ng-click="app.logout()" type="button" class="btn btn-default btn-link navbar-btn navbar-right">Log out</button>
+
   <!-- Brand and toggle get grouped for better mobile display -->
   <div class="navbar-header">
     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -7,17 +10,16 @@
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
     </button>
-    <a class="navbar-brand appName" href="/#">Activ8</a>
-    <!-- Logout button -->
-    <button ng-click="app.logout()" class="btn navbar-right logout-button">Logout</button>
-  </div>
+    <a class="navbar-brand" href="/#">Activ8</a>
+
+  </div><!-- /.navbar-header -->
 
   <!-- Collect the nav links, forms, and other content for toggling -->
   <div ng-controller="NavCtrl" class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
     <ul class="nav navbar-nav">
-      <li class="active"><a href="/#">Dashboard <span class="sr-only">(current)</span></a></li>
-      <li><a href="index.html#/history">History</a></li>
+      <li><a href="/#">Home</a></li>
+      <li class="active"><a href="index.html#/history">History<span class="sr-only">(current)</span></a></li>
       <li><a href="index.html#/new-workout">Log Workout</a></li>
     </ul>
-    </div><!-- /.navbar-collapse -->
-  </nav>
+  </div><!-- /.navbar-collapse -->
+</nav>

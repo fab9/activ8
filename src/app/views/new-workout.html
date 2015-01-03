@@ -5,48 +5,56 @@
     <a href="#history" class="btn btn-warning btn-sm" role="button">My History</a>
   </section>
  -->
-<div class="row">
-  <section>
+<section>
 
-    <!-- Form -->
-    <form class="new-move" ng-submit="work.addWork(work.workout)" name="new">
-     <div class="new-moves" ng-repeat="move in work.workout" >
+  <!-- Form -->
+  <form id="log" ng-submit="work.addWork(work.workout)" name="new">
+   <div class="row">
+    <div class="new-moves col-sm-4 col-sm-offset-4" ng-repeat="move in work.workout" >
 
-      <div class="form-group">
-        <input type="text" class="form-control" ng-model="move.name" list="moving" placeholder="Select Movement" autocomplete="on" required>
-      </div>
+         <div class="form-group">
+           <label for="selectmovement">Select Movement</label>
+           <input type="text" class="form-control" id="selectmovement" ng-model="move.name" list="moving" placeholder="e.g. Push Ups" autocomplete="on" required>
+           <!-- delete movement -->
+             <button class="btn btn-link btn-delete glyphicon glyphicon-remove" aria-label="Remove" type="button" ng-click="work.delete(move)">
 
-      <div class="form-group">
-        <input type="text" class="form-control" ng-model="move.reps" placeholder="Reps" required>
-      </div>
+             </button>
+         </div>
 
-      <div class="form-group">
-        <input type="text" class="form-control" ng-model="move.rds"  placeholder="Rounds" required>
-      </div>
+         <div class="form-group">
+           <label for="reps">Reps</label>
+           <input type="number" class="form-control" id="reps" ng-model="move.reps" placeholder="e.g. 10" required>
+         </div>
 
-      <div class="input-group">
-        <input type="text" class="form-control" ng-model="move.weight" placeholder="Weight">
-        <span class="input-group-btn">
-          <button class="btn btn-danger glyphicon glyphicon-trash" type="button" ng-click="work.delete(move)"></button>
-        </span>
-      </div><!-- /input-group -->
-      <input type="text" ng-hide="true" ng-model="move.moveNumber">
-    </div><!-- /.new-moves -->
+         <div class="form-group">
+           <label for="rounds">Rounds</label>
+           <input type="number" class="form-control" id="rounds" ng-model="move.rds"  placeholder="e.g. 2" required>
+         </div>
 
-     <div class="btn-group-vertical center-block">
-      <div class="form-group">
-       <input type="button" class="form-control btn btn-default btn-success" value="(+)Add Movement" ng-click="work.addMove()">
-     </div>
-       <div class="form-group">
-       <input type="submit" class="form-control btn btn-default btn-primary" value="Save Workout" ng-disabled="work.disable()">
-     </div>
-     </div>
-    </form>
+         <label for="weight">Weight</label>
+         <div class="input-group">
+           <input type="number" class="form-control" id="weight" ng-model="move.weight" placeholder="e.g. 0">
+         <div class="input-group-addon">lbs</div>
+         </div><!-- /input-group -->
+         <input type="text" ng-hide="true" ng-model="move.moveNumber">
 
-    <datalist id="moving">
-      <option data-ng-repeat="moves in work.moveList.movements" value="{{moves.name}}"></option>
-    </datalist>
-    <br>
-  </section>
-</div><!-- /.row -->
+       </div><!-- /.new-moves -->
+   </div><!-- /.row -->
+
+  <!-- Begin buttons -->
+   <div class="btn-group-vertical col-sm-4 col-sm-offset-4 log-btn-group">
+    <div class="form-group">
+     <input type="button" class="form-control btn" value="Add Movement" ng-click="work.addMove()">
+   </div>
+     <div class="form-group">
+     <input type="submit" class="form-control btn btn-default btn-primary" value="Save Workout" ng-disabled="work.disable()">
+   </div>
+   </div>
+  </form>
+
+  <datalist id="moving">
+    <option data-ng-repeat="moves in work.moveList.movements" value="{{moves.name}}"></option>
+  </datalist>
+  <br>
+</section><!-- /.row -->
 </div><!-- /.main-body -->

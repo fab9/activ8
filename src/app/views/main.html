@@ -1,25 +1,27 @@
-<div ng-include="'components/navbar/navbar.html'"></div>
-<!-- Dashboard -->
+<nav class="navbar navbar-default" role="navigation">
+  <a class="navbar-brand text-center" href="/#">Activ8</a>
+  <!-- Logout -->
+  <button ng-click="app.logout()" type="button" class="btn btn-default btn-link navbar-btn navbar-right">Log out</button>
+
+</nav>
+<!-- Home -->
 <!-- <div class="text-center page-title"><p>Dashboard</p></div> -->
-<div class="row">
-  <section id="dashboard">
+<div class="row" id="dashboard">
+  <section class="col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2">
     <!-- Begin new-dash -->
     <section class="new-dash">
-      <div class="row row-1">
-        <section class="avatar">
-          <img ng-src="{{app.user.avatarUrl}}" class="img-responsive">
-          <p class="fbName">{{app.user.fullName|| displayName}}</p>
-        </section><!-- / section.avatar -->
-      </div>
+      <section class="avatar">
+        <img ng-src="{{app.user.avatarUrl}}" class="img-responsive">
+        <p class="fbName">{{app.user.fullName|| displayName}}</p>
+      </section><!-- / section.avatar -->
     </section><!-- End new-dash -->
 
     <!-- BEGIN Buttons -->
-    <section>
-      <div class="btn-group-vertical btn-group-lg dash-btn-group btn-block" role="group" aria-label="user info">
-        <a role="button" class="work-btn btn btn-default" href="#new-workout">Log Workout</a>
-        <a role="button" class="history-btn btn btn-default" href="#history">My History</a>
-        <a role="button" class="pr-btn btn btn-default" href="#pr">Personal Records</a>
-      </div>
-    </section><!-- /.dash-buttons -->
+    <div class="btn-group-vertical btn-group-lg btn-block" role="group" aria-label="user info">
+      <a role="button" class="work-btn btn btn-default" href="#new-workout">Log Workout</a>
+      <a role="button" class="history-btn btn btn-default" href="#history">My History</a>
+      <a role="button" class="pr-btn btn btn-default" href="#pr">Personal Records</a>
+    </div>
+
   </section><!-- / section#dashboard -->
-</div>
+</div><!-- /.row -->
